@@ -1,0 +1,324 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Learn Sync Quest - Black & Yellow Professional Theme
+   High-contrast black/yellow educational platform design
+   All colors MUST be HSL.
+*/
+
+@layer base {
+  /* LearnNight - Dark Mode Theme (Default) */
+  :root {
+    /* Dark Backgrounds */
+    --background: 222 84% 5%;      /* Deep dark blue-black */
+    --foreground: 210 40% 98%;     /* Clean white text */
+
+    /* Cards and surfaces */
+    --card: 220 39% 11%;           /* Dark card background */
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 39% 11%;
+    --popover-foreground: 210 40% 98%;
+
+    /* Primary - Professional Education Blue */
+    --primary: 217 91% 60%;        /* Bright education blue */
+    --primary-foreground: 222 84% 5%;
+    --primary-light: 217 91% 75%;
+    --primary-dark: 217 91% 45%;
+
+    /* Secondary - Learning Progress Cyan */
+    --secondary: 199 89% 48%;      /* Sky blue for progress */
+    --secondary-foreground: 222 84% 5%;
+
+    /* Success Green for achievements */
+    --success: 158 64% 52%;        /* Achievement green */
+    --success-foreground: 222 84% 5%;
+    --success-light: 158 64% 85%;
+
+    /* Warning Amber for highlights */
+    --warning: 38 92% 50%;         /* Amber for attention */
+    --warning-foreground: 222 84% 5%;
+    --warning-light: 38 92% 85%;
+
+    /* Info Purple for features */
+    --info: 259 94% 51%;           /* Purple for info */
+    --info-foreground: 222 84% 5%;
+
+    /* Muted dark tones */
+    --muted: 215 28% 17%;          /* Subtle backgrounds */
+    --muted-foreground: 217 19% 62%; /* Muted text */
+
+    --accent: 215 28% 17%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 19% 27%;         /* Dark borders */
+    --input: 215 28% 17%;          /* Input backgrounds */
+    --ring: 217 91% 60%;           /* Focus rings */
+
+    --radius: 0.75rem;
+
+    /* LearnNight gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(199 89% 48%));
+    --gradient-success: linear-gradient(135deg, hsl(158 64% 52%), hsl(158 64% 42%));
+    --gradient-hero: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(199 89% 48%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(220 39% 11%) 0%, hsl(215 28% 17%) 100%);
+    --gradient-glow: radial-gradient(circle at center, hsl(217 91% 60% / 0.3), transparent 70%);
+    
+    /* Dark theme shadows with blue glow */
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.5);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.5), 0 2px 4px -1px hsl(0 0% 0% / 0.3);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.5), 0 4px 6px -2px hsl(0 0% 0% / 0.3);
+    --shadow-glow: 0 0 30px hsl(217 91% 60% / 0.3), 0 0 60px hsl(217 91% 60% / 0.1);
+    --shadow-intense: 0 0 20px hsl(217 91% 60% / 0.6), 0 0 40px hsl(217 91% 60% / 0.3);
+
+    /* Animation easing */
+    --ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+    --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  /* LearnBright - Light Mode Theme */
+  .light {
+    --background: 210 40% 98%;     /* Clean white background */
+    --foreground: 222 84% 5%;      /* Dark text */
+
+    --card: 0 0% 100%;             /* Pure white cards */
+    --card-foreground: 222 84% 5%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 84% 5%;
+
+    /* Primary - Professional Indigo */
+    --primary: 217 91% 45%;        /* Professional indigo */
+    --primary-foreground: 210 40% 98%;
+    --primary-light: 217 91% 60%;
+    --primary-dark: 217 91% 35%;
+
+    /* Secondary - Sky Blue for progress */
+    --secondary: 199 89% 40%;      /* Darker sky blue */
+    --secondary-foreground: 210 40% 98%;
+
+    /* Success Green */
+    --success: 158 64% 42%;        /* Darker green for light mode */
+    --success-foreground: 210 40% 98%;
+    --success-light: 158 64% 85%;
+
+    /* Warning Amber */
+    --warning: 38 92% 40%;         /* Darker amber */
+    --warning-foreground: 210 40% 98%;
+    --warning-light: 38 92% 85%;
+
+    /* Info Purple */
+    --info: 259 94% 41%;           /* Darker purple */
+    --info-foreground: 210 40% 98%;
+
+    /* Light theme muted tones */
+    --muted: 210 40% 96%;          /* Very light gray */
+    --muted-foreground: 215 16% 47%; /* Medium gray text */
+
+    --accent: 210 40% 96%;
+    --accent-foreground: 222 84% 5%;
+
+    --destructive: 0 84% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214 32% 91%;         /* Light borders */
+    --input: 210 40% 96%;          /* Light input backgrounds */
+    --ring: 217 91% 45%;
+
+    /* LearnBright gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 45%), hsl(199 89% 40%));
+    --gradient-success: linear-gradient(135deg, hsl(158 64% 42%), hsl(158 64% 32%));
+    --gradient-hero: linear-gradient(135deg, hsl(217 91% 45%) 0%, hsl(199 89% 40%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(210 40% 96%) 100%);
+    --gradient-glow: radial-gradient(circle at center, hsl(217 91% 45% / 0.2), transparent 70%);
+    
+    /* Light theme shadows with subtle indigo glow */
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.1);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.1), 0 2px 4px -1px hsl(0 0% 0% / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.1), 0 4px 6px -2px hsl(0 0% 0% / 0.05);
+    --shadow-glow: 0 0 30px hsl(217 91% 45% / 0.2), 0 0 60px hsl(217 91% 45% / 0.1);
+    --shadow-intense: 0 0 20px hsl(217 91% 45% / 0.4), 0 0 40px hsl(217 91% 45% / 0.2);
+
+    --sidebar-background: 240 6% 10%;
+    --sidebar-foreground: 240 5% 96%;
+    --sidebar-primary: 217 91% 75%;
+    --sidebar-primary-foreground: 222 47% 11%;
+    --sidebar-accent: 240 4% 16%;
+    --sidebar-accent-foreground: 240 5% 96%;
+    --sidebar-border: 240 4% 16%;
+    --sidebar-ring: 217 91% 75%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  /* Theme transition animations */
+  *, *::before, *::after {
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+  }
+
+  /* Custom scrollbar for webkit browsers */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-muted/30;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-border rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-border/80;
+  }
+
+  /* Focus styles for accessibility */
+  :focus-visible {
+    @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
+  }
+
+  /* Selection styles */
+  ::selection {
+    @apply bg-primary/20 text-primary-foreground;
+  }
+
+  /* Print styles */
+  @media print {
+    * {
+      @apply text-black bg-white;
+    }
+  }
+
+  /* Floating particles background */
+  .particles-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    overflow: hidden;
+  }
+
+  .particles-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-glow);
+    animation: float-particles 20s infinite linear;
+    opacity: 0.1;
+  }
+
+  /* Enhanced animations */
+  .typing-cursor {
+    animation: blink 1s infinite;
+  }
+
+  .glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .glow-intense {
+    box-shadow: var(--shadow-intense);
+  }
+
+  /* Theme toggle styles */
+  .theme-toggle {
+    position: relative;
+    width: 60px;
+    height: 30px;
+    background: hsl(var(--muted));
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid hsl(var(--border));
+  }
+
+  .theme-toggle::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 22px;
+    height: 22px;
+    background: hsl(var(--background));
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .dark .theme-toggle::before {
+    transform: translateX(28px);
+  }
+
+  .theme-toggle:hover {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .hover-lift {
+    transition: all 0.3s var(--ease-spring);
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: var(--shadow-glow);
+  }
+
+  .bounce-in {
+    animation: bounce-subtle 0.6s var(--ease-bounce);
+  }
+
+  @keyframes float-particles {
+    0% { transform: translateY(100vh) rotate(0deg); }
+    100% { transform: translateY(-100vh) rotate(360deg); }
+  }
+
+  @keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+  }
+
+  @keyframes bounce-subtle {
+    0% { transform: scale(0.3) rotate(-45deg); opacity: 0; }
+    50% { transform: scale(1.05) rotate(-22.5deg); }
+    100% { transform: scale(1) rotate(0deg); opacity: 1; }
+  }
+}
